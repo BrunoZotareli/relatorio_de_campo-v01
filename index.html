@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Visita Agronômica</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Cadastro de Visita Agronômica</h1>
+
+    <form id="formVisita">
+      <input type="text" id="nome" placeholder="Nome do vendedor" required />
+
+      <label for="solo">Qualidade do solo:</label>
+      <select id="solo" required>
+        <option value="">Selecione</option>
+        <option value="Boa">Boa</option>
+        <option value="Regular">Regular</option>
+        <option value="Ruim">Ruim</option>
+      </select>
+
+      <label><input type="checkbox" id="fungos" /> Infestação fúngica</label>
+      <div id="detalhesFungos" class="detalhes" style="display: none;">
+        <input type="text" id="tipoFungo" placeholder="Tipo de fungo" />
+        <select id="nivelFungo">
+          <option value="1">Nível 1 - Baixo</option>
+          <option value="2">Nível 2 - Médio</option>
+          <option value="3">Nível 3 - Alto</option>
+        </select>
+        <select id="aplicarFungicida">
+          <option value="Sim">Aplicar fungicida?</option>
+          <option value="Sim">Sim</option>
+          <option value="Não">Não</option>
+        </select>
+        <label>Fotos dos fungos:</label>
+        <input type="file" id="fotosFungos" accept="image/*" multiple />
+        <div id="previewFungos" class="preview-imagens"></div>
+      </div>
+
+      <label><input type="checkbox" id="insetos" /> Infestação de insetos</label>
+      <div id="detalhesInsetos" class="detalhes" style="display: none;">
+        <input type="text" id="tipoInseto" placeholder="Tipo de inseto" />
+        <select id="nivelInseto">
+          <option value="1">Nível 1 - Baixo</option>
+          <option value="2">Nível 2 - Médio</option>
+          <option value="3">Nível 3 - Alto</option>
+        </select>
+        <select id="aplicarInseticida">
+          <option value="Sim">Aplicar inseticida?</option>
+          <option value="Sim">Sim</option>
+          <option value="Não">Não</option>
+        </select>
+        <label>Fotos dos insetos:</label>
+        <input type="file" id="fotosInsetos" accept="image/*" multiple />
+        <div id="previewInsetos" class="preview-imagens"></div>
+      </div>
+
+      <label><input type="checkbox" id="plantas" /> Infestação de plantas daninhas</label>
+      <div id="detalhesPlantas" class="detalhes" style="display: none;">
+        <label>Fotos das plantas daninhas:</label>
+        <input type="file" id="fotosPlantas" accept="image/*" multiple />
+        <div id="previewPlantas" class="preview-imagens"></div>
+      </div>
+
+      <button type="submit">Salvar Visita</button>
+    </form>
+
+    <div id="status"></div>
+
+    <h2>Relatório</h2>
+    <ul id="listaRelatorio"></ul>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

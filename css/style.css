@@ -1,0 +1,159 @@
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  padding: 20px;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Títulos */
+h1, h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2e7d32;
+}
+
+/* Formulário */
+form {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Alinha checkbox com label lado a lado */
+form label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+form label input[type="checkbox"] {
+  margin: 0;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+input:focus, select:focus {
+  border-color: #2e7d32;
+}
+
+/* Botão */
+button {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #256528;
+}
+
+/* Detalhes (Fungos, Insetos, Plantas) */
+.detalhes {
+  background-color: #e8f5e9;
+  padding: 16px;
+  border-left: 4px solid #2e7d32;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: -8px;
+}
+
+.detalhes label {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.detalhes input,
+.detalhes select {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+}
+
+/* Preview das imagens */
+.preview-imagens {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.preview-imagens img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+
+/* Status de salvamento */
+#status {
+  text-align: center;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+/* Relatório */
+#listaRelatorio {
+  list-style: none;
+  padding: 0;
+  background: #fff;
+  border-radius: 12px;
+  margin-top: 20px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+}
+
+#listaRelatorio li {
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  input, select, button {
+    font-size: 16px;
+  }
+
+  .detalhes input, .detalhes select {
+    font-size: 15px;
+  }
+}
